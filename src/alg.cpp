@@ -43,8 +43,8 @@ uint64_t sumPrime(uint64_t hbound) {
 
 uint64_t twinPrimes(uint64_t lbound, uint64_t hbound) {
   uint64_t count = 0;
-  for (int i = lbound; i < hbound-1; i++) {
-      if (checkPrime(i) == true && checkPrime(i+2) == true) count++;
+  for (uint64_t i = lbound; i < hbound-1; i++) {
+      if (checkPrime(i) && checkPrime(i+2)) count++;
   }
   return count;
 }
